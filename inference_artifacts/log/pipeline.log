@@ -1,0 +1,72 @@
+[2024-12-08 05:57:36,926|ALO|MSG|asset.py(523)|get_output_path()] Successfully got << output path >> for saving your data into csv or jpg file: 
+ /home/jovyan/과제/실직속/fcst_simul/fcst_0914/inference_artifacts/output/
+[2024-12-08 05:57:36,939|ALO|MSG|asset.py(549)|get_extra_output_path()] Successfully got << extra output path >> for saving your output data: 
+ /home/jovyan/과제/실직속/fcst_simul/fcst_0914/inference_artifacts/extra_output/inference/ 
+[SHOW|2024-12-08 05:57:36,955|ALO|INFO|asset.py(738)|_run()] inference asset start
+[2024-12-08 05:57:36,968|ALO|MSG|asset.py(660)|_asset_start_info()] [96m
+=========================================================== ASSET START ===========================================================
+- time (UTC)        : 2024-12-08 05:57:36
+- current step      : inference
+- asset branch.     : inference
+- alolib ver.       : v2.5.2
+- alo ver.          : v2.5.2
+- load config. keys : dict_keys(['meta'])
+- load data keys    : dict_keys([])
+- load args.        : {'simulation': None, 'timestamp': '2022-08-19-12', 'xai': True}
+====================================================================================================================================
+[0m
+[2024-12-08 05:57:36,990|USER|INFO|asset_inference.py(40)|run()] 
+ args: 
+ {'timestamp': '2022-08-19-12', 'xai': True, 'simulation': None}
+[2024-12-08 05:57:37,013|USER|INFO|asset_inference.py(41)|run()] ### Start inference ###
+[2024-12-08 05:57:38,049|ALO|WARNING|asset.py(417)|save_summary()] Please enter the << external_path - save_inference_artifacts_path >> in the experimental_plan.yaml.
+[2024-12-08 05:57:38,063|ALO|MSG|asset.py(446)|save_summary()] Successfully saved inference summary yaml. 
+ >> /home/jovyan/과제/실직속/fcst_simul/fcst_0914/inference_artifacts/score/inference_summary.yaml
+[2024-12-08 05:57:38,076|ALO|INFO|asset.py(447)|save_summary()] Save summary : 
+ {'result': 'OK', 'score': 0.9, 'date': '2024-12-08 05:57:38', 'note': 'erwe', 'probability': {}, 'file_path': '', 'version': ''}
+
+[SHOW|2024-12-08 05:57:38,090|ALO|INFO|asset.py(755)|_run()] inference asset finish
+[2024-12-08 05:57:38,103|ALO|MSG|asset.py(680)|_asset_finish_info()] [96m
+=========================================================== ASSET FINISH ===========================================================
+- time (UTC)        : 2024-12-08 05:57:38
+- current step      : inference
+- save config. keys : dict_keys(['meta'])
+- save data keys    : dict_keys(['output', 'weight_avg', 'weight_pivt', 'data_split'])
+====================================================================================================================================
+[0m
+[2024-12-08 05:57:38,132|ALO|MSG|asset.py(523)|get_output_path()] Successfully got << output path >> for saving your data into csv or jpg file: 
+ /home/jovyan/과제/실직속/fcst_simul/fcst_0914/inference_artifacts/output/
+[2024-12-08 05:57:38,145|ALO|MSG|asset.py(549)|get_extra_output_path()] Successfully got << extra output path >> for saving your output data: 
+ /home/jovyan/과제/실직속/fcst_simul/fcst_0914/inference_artifacts/extra_output/output/ 
+[SHOW|2024-12-08 05:57:38,158|ALO|INFO|asset.py(738)|_run()] output asset start
+[2024-12-08 05:57:38,171|ALO|MSG|asset.py(660)|_asset_start_info()] [96m
+=========================================================== ASSET START ===========================================================
+- time (UTC)        : 2024-12-08 05:57:38
+- current step      : output
+- asset branch.     : output
+- alolib ver.       : v2.5.2
+- alo ver.          : v2.5.2
+- load config. keys : dict_keys(['meta'])
+- load data keys    : dict_keys(['output', 'weight_avg', 'weight_pivt', 'data_split'])
+- load args.        : {'plotly': True}
+====================================================================================================================================
+[0m
+[2024-12-08 05:57:38,193|USER|INFO|asset_output.py(35)|run()] 
+ args: 
+ {'plotly': True}
+[2024-12-08 05:57:38,216|USER|INFO|asset_output.py(36)|run()] ### Start inference ###
+[2024-12-08 05:57:38,605|ALO|WARNING|asset.py(417)|save_summary()] Please enter the << external_path - save_inference_artifacts_path >> in the experimental_plan.yaml.
+[2024-12-08 05:57:38,620|ALO|MSG|asset.py(446)|save_summary()] Successfully saved inference summary yaml. 
+ >> /home/jovyan/과제/실직속/fcst_simul/fcst_0914/inference_artifacts/score/inference_summary.yaml
+[2024-12-08 05:57:38,632|ALO|INFO|asset.py(447)|save_summary()] Save summary : 
+ {'result': 'OK', 'score': 0.9, 'date': '2024-12-08 05:57:38', 'note': 'erwe', 'probability': {}, 'file_path': '', 'version': ''}
+
+[SHOW|2024-12-08 05:57:38,645|ALO|INFO|asset.py(755)|_run()] output asset finish
+[2024-12-08 05:57:38,658|ALO|MSG|asset.py(680)|_asset_finish_info()] [96m
+=========================================================== ASSET FINISH ===========================================================
+- time (UTC)        : 2024-12-08 05:57:38
+- current step      : output
+- save config. keys : dict_keys(['meta'])
+- save data keys    : dict_keys(['output', 'weight_avg', 'weight_pivt', 'data_split'])
+====================================================================================================================================
+[0m
