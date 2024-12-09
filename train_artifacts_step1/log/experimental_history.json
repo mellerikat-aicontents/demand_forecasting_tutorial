@@ -1,0 +1,14 @@
+{
+    "data_id_description": {
+        "/home/jovyan/\uacfc\uc81c/\uc2e4\uc9c1\uc18d/fcst_simul/fcst_0914/input/train/electronic_train/trai.csv": 16596338294954435805
+    },
+    "data_id": "8e3ea24e29ef",
+    "param_id": "6eb9fa8edbee",
+    "code_id_description": {
+        "train": 16905086772036843277
+    },
+    "code_id": "27cd76268473",
+    "id": "20241209T091458Z-30951385-fcst_simulation",
+    "start_time": "20241209T091458Z",
+    "end_time": "20241209T120509Z"
+}

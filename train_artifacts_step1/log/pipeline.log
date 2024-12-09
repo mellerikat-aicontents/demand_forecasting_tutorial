@@ -1,0 +1,104 @@
+[2024-12-09 09:15:10,646|ALO|MSG|asset.py(523)|get_output_path()] Successfully got << output path >> for saving your data into csv or jpg file: 
+ /home/jovyan/과제/실직속/fcst_simul/fcst_0914/train_artifacts/output/
+[2024-12-09 09:15:10,649|ALO|MSG|asset.py(549)|get_extra_output_path()] Successfully got << extra output path >> for saving your output data: 
+ /home/jovyan/과제/실직속/fcst_simul/fcst_0914/train_artifacts/extra_output/train/ 
+[2024-12-09 09:15:10,651|ALO|MSG|asset.py(499)|get_model_path()] Successfully got model path for saving or loading your AI model: 
+ /home/jovyan/과제/실직속/fcst_simul/fcst_0914/train_artifacts/models/train/
+[SHOW|2024-12-09 09:15:10,653|ALO|INFO|asset.py(738)|_run()] train asset start
+[2024-12-09 09:15:10,655|ALO|MSG|asset.py(660)|_asset_start_info()] [96m
+=========================================================== ASSET START ===========================================================
+- time (UTC)        : 2024-12-09 09:15:10
+- current step      : train
+- asset branch.     : train
+- alolib ver.       : v2.5.2
+- alo ver.          : v2.5.2
+- load config. keys : dict_keys(['meta'])
+- load data keys    : dict_keys([])
+- load args.        : {   'dataset_add_encoder_length': True,
+    'dataset_add_relative_time_idx': True,
+    'dataset_encoder_activation_function': 'relu',
+    'dataset_freqeuncy': 'hour',
+    'dataset_group_key': ['건물번호'],
+    'dataset_known_categoricals': [],
+    'dataset_known_real': ['기온(C)', '강수량(mm)', '풍속(m/s)', '습도(%)'],
+    'dataset_max_encoder_length': 72,
+    'dataset_max_prediction_length': 24,
+    'dataset_min_encoder_length': 24,
+    'dataset_min_prediction_length': 6,
+    'dataset_seed_number': 0,
+    'dataset_static_categoricals': ['건물번호', '건물유형'],
+    'dataset_static_reals': ['연면적(m2)', '냉방면적(m2)', '태양광용량(kW)', 'ESS저장용량(kWh)', 'PCS용량(kW)'],
+    'dataset_target': '전력소비량(kWh)',
+    'dataset_timestamp': '일시',
+    'dataset_training_cutoff': 0,
+    'dataset_unknown_categoricals': [],
+    'dataset_unknown_real': ['전력소비량(kWh)'],
+    'model_QuantileLoss_para': 1,
+    'model_algorithm': 'tft',
+    'model_attention_head_size': 16,
+    'model_dropout': 0.5,
+    'model_hidden_continuous_size': 16,
+    'model_hidden_layer_size': 32,
+    'model_labelencodder_embedding': {'건물번호': 7, '건물유형': 10},
+    'model_learning_rate': 0.0005,
+    'model_log_interval': 10,
+    'model_output_size': 7,
+    'model_reduce_on_plateau_patience': 10,
+    'model_weight_decay': 0.05,
+    'trainer_batch_size': 512,
+    'trainer_early_stop_min_delta': 0.0005,
+    'trainer_early_stop_mode': 'min',
+    'trainer_early_stop_monitor': 'val_loss',
+    'trainer_early_stop_patience': 10,
+    'trainer_early_stop_verbose': False,
+    'trainer_epoch_size': 200,
+    'trainer_gradient_clip_val': 0.1}
+====================================================================================================================================
+[0m
+[2024-12-09 09:15:11,542|ALO|INFO|Created a temporary directory at /tmp/tmpgvl4c5cm
+[2024-12-09 09:15:11,542|ALO|INFO|Writing /tmp/tmpgvl4c5cm/_remote_module_non_scriptable.py
+[2024-12-09 09:15:12,171|ALO|INFO|GPU available: True, used: True
+[2024-12-09 09:15:12,171|ALO|INFO|TPU available: False, using: 0 TPU cores
+[2024-12-09 09:15:12,171|ALO|INFO|IPU available: False, using: 0 IPUs
+[2024-12-09 09:15:12,171|ALO|INFO|HPU available: False, using: 0 HPUs
+[2024-12-09 09:15:14,019|ALO|INFO|LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+[2024-12-09 09:15:14,036|ALO|INFO|
+   | Name                               | Type                            | Params
+----------------------------------------------------------------------------------------
+0  | loss                               | QuantileLoss                    | 0     
+1  | logging_metrics                    | ModuleList                      | 0     
+2  | input_embeddings                   | MultiEmbedding                  | 837   
+3  | prescalers                         | ModuleDict                      | 384   
+4  | static_variable_selection          | VariableSelectionNetwork        | 12.3 K
+5  | encoder_variable_selection         | VariableSelectionNetwork        | 11.9 K
+6  | decoder_variable_selection         | VariableSelectionNetwork        | 9.8 K 
+7  | static_context_variable_selection  | GatedResidualNetwork            | 4.3 K 
+8  | static_context_initial_hidden_lstm | GatedResidualNetwork            | 4.3 K 
+9  | static_context_initial_cell_lstm   | GatedResidualNetwork            | 4.3 K 
+10 | static_context_enrichment          | GatedResidualNetwork            | 4.3 K 
+11 | lstm_encoder                       | LSTM                            | 8.4 K 
+12 | lstm_decoder                       | LSTM                            | 8.4 K 
+13 | post_lstm_gate_encoder             | GatedLinearUnit                 | 2.1 K 
+14 | post_lstm_add_norm_encoder         | AddNorm                         | 64    
+15 | static_enrichment                  | GatedResidualNetwork            | 5.3 K 
+16 | multihead_attn                     | InterpretableMultiHeadAttention | 2.2 K 
+17 | post_attn_gate_norm                | GateAddNorm                     | 2.2 K 
+18 | pos_wise_ff                        | GatedResidualNetwork            | 4.3 K 
+19 | pre_output_gate_norm               | GateAddNorm                     | 2.2 K 
+20 | output_layer                       | Linear                          | 231   
+----------------------------------------------------------------------------------------
+87.3 K    Trainable params
+0         Non-trainable params
+87.3 K    Total params
+0.349     Total estimated model params size (MB)
+[2024-12-09 12:05:08,471|USER|INFO|asset_train.py(128)|run()] 
+ output dict: {}
+[SHOW|2024-12-09 12:05:08,860|ALO|INFO|asset.py(755)|_run()] train asset finish
+[2024-12-09 12:05:08,862|ALO|MSG|asset.py(680)|_asset_finish_info()] [96m
+=========================================================== ASSET FINISH ===========================================================
+- time (UTC)        : 2024-12-09 12:05:08
+- current step      : train
+- save config. keys : dict_keys(['meta'])
+- save data keys    : dict_keys([])
+====================================================================================================================================
+[0m
