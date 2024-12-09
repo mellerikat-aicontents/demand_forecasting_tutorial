@@ -1,0 +1,113 @@
+[2024-12-08 05:57:35,400|ALO|INFO|utils.py(79)|_log_process()] --------------------     Start setting-up ALO source code into the memory..
+[2024-12-08 05:57:35,414|ALO|INFO|utils.py(79)|_log_process()] --------------------     Finish setting-up ALO source code
+[2024-12-08 05:57:35,427|ALO|INFO|utils.py(79)|_log_process()] --------------------     Start ALO library installation
+[2024-12-08 05:57:35,442|ALO|MSG|alo.py(505)|_set_alolib()] alolib already exists in local path.
+
+[2024-12-08 05:57:36,339|ALO|MSG|alo.py(518)|_set_alolib()] Success installing alolib requirements.txt
+[2024-12-08 05:57:36,352|ALO|MSG|alo.py(519)|_set_alolib()] Requirement already satisfied: pyyaml==6.0.1 in /home/jovyan/.pyenv/versions/3.10.14/lib/python3.10/site-packages (from -r /home/jovyan/과제/실직속/fcst_simul/fcst_0914/alolib/requirements.txt (line 1)) (6.0.1)
+Requirement already satisfied: pytz==2021.3 in /home/jovyan/.pyenv/versions/3.10.14/lib/python3.10/site-packages (from -r /home/jovyan/과제/실직속/fcst_simul/fcst_0914/alolib/requirements.txt (line 2)) (2021.3)
+Requirement already satisfied: psutil==5.9.5 in /home/jovyan/.pyenv/versions/3.10.14/lib/python3.10/site-packages (from -r /home/jovyan/과제/실직속/fcst_simul/fcst_0914/alolib/requirements.txt (line 3)) (5.9.5)
+Requirement already satisfied: requests==2.31.0 in /home/jovyan/.pyenv/versions/3.10.14/lib/python3.10/site-packages (from -r /home/jovyan/과제/실직속/fcst_simul/fcst_0914/alolib/requirements.txt (line 4)) (2.31.0)
+Requirement already satisfied: colorama==0.4.6 in /home/jovyan/.pyenv/versions/3.10.14/lib/python3.10/site-packages (from -r /home/jovyan/과제/실직속/fcst_simul/fcst_0914/alolib/requirements.txt (line 5)) (0.4.6)
+Requirement already satisfied: memory-profiler==0.61.0 in /home/jovyan/.pyenv/versions/3.10.14/lib/python3.10/site-packages (from -r /home/jovyan/과제/실직속/fcst_simul/fcst_0914/alolib/requirements.txt (line 6)) (0.61.0)
+Requirement already satisfied: charset-normalizer<4,>=2 in /home/jovyan/.pyenv/versions/3.10.14/lib/python3.10/site-packages (from requests==2.31.0->-r /home/jovyan/과제/실직속/fcst_simul/fcst_0914/alolib/requirements.txt (line 4)) (3.3.2)
+Requirement already satisfied: idna<4,>=2.5 in /home/jovyan/.pyenv/versions/3.10.14/lib/python3.10/site-packages (from requests==2.31.0->-r /home/jovyan/과제/실직속/fcst_simul/fcst_0914/alolib/requirements.txt (line 4)) (3.7)
+Requirement already satisfied: urllib3<3,>=1.21.1 in /home/jovyan/.pyenv/versions/3.10.14/lib/python3.10/site-packages (from requests==2.31.0->-r /home/jovyan/과제/실직속/fcst_simul/fcst_0914/alolib/requirements.txt (line 4)) (2.2.2)
+Requirement already satisfied: certifi>=2017.4.17 in /home/jovyan/.local/lib/python3.10/site-packages (from requests==2.31.0->-r /home/jovyan/과제/실직속/fcst_simul/fcst_0914/alolib/requirements.txt (line 4)) (2024.6.2)
+
+[2024-12-08 05:57:36,366|ALO|INFO|utils.py(79)|_log_process()] --------------------     Finish ALO library installation
+[2024-12-08 05:57:36,379|ALO|INFO|utils.py(79)|_log_process()] --------------------     Check ALO version
+[2024-12-08 05:57:36,392|ALO|MSG|alo.py(542)|_get_alo_version()] ALO version = v2.5.2
+[2024-12-08 05:57:36,406|ALO|INFO|utils.py(79)|_log_process()] --------------------     Finish ALO version check
+[2024-12-08 05:57:36,420|ALO|INFO|utils.py(79)|_log_process()] --------------------     Start loading solution-metadata
+[2024-12-08 05:57:36,433|ALO|MSG|alo.py(647)|load_solution_metadata()] Solution metadata file name not entered. Skip updating solution metadata into experimental_plan.
+[2024-12-08 05:57:36,446|ALO|INFO|utils.py(79)|_log_process()] --------------------     Load & update experimental_plan
+[2024-12-08 05:57:36,460|ALO|MSG|yaml.py(158)|read_yaml()] Start to read experimental plan yaml (& update by solution meta)
+[2024-12-08 05:57:36,473|ALO|MSG|yaml.py(163)|read_yaml()] Successfully loaded << experimental_plan.yaml >> (file: /home/jovyan/과제/실직속/fcst_simul/fcst_0914/solution/experimental_plan.yaml)
+[2024-12-08 05:57:36,508|ALO|WARNING|yaml.py(319)|_set_default_control()] experimental_plan.yaml control - check_resource not found. Set it default value : False
+[2024-12-08 05:57:36,522|ALO|WARNING|yaml.py(319)|_set_default_control()] experimental_plan.yaml control - save_inference_format not found. Set it default value : tar.gz
+[2024-12-08 05:57:36,535|ALO|INFO|utils.py(79)|_log_process()] --------------------     Finish loading & updating experimental_plan
+[2024-12-08 05:57:36,548|ALO|INFO|utils.py(79)|_log_process()] --------------------     Setup ALO system environments
+[2024-12-08 05:57:36,561|ALO|MSG|alo.py(628)|_set_system_envs()] system_envs: {'redis_list_instance': None, 'redis_pubsub_instance': None, 'alo_version': 'v2.5.2', 'experimental_start_time': '20241208T055736Z', 'solution_metadata': {}, 'experimental_plan_path': '/home/jovyan/과제/실직속/fcst_simul/fcst_0914/solution/experimental_plan.yaml', 'experimental_name': 'fcst_simulation', 'experimental_version': '1.0.0', 'solution_metadata_version': None, 'q_inference_summary': None, 'q_inference_artifacts': None, 'redis_host': None, 'redis_port': None, 'redis_db_number': None, 'inference_result_datatype': None, 'train_datatype': None, 'pipeline_mode': 'inference', 'runs_status': 'init', 'boot_on': False, 'loop': False, 'start_time': '241208_055736', 'pipeline_list': ['inference_pipeline']}
+[2024-12-08 05:57:36,575|ALO|INFO|utils.py(79)|_log_process()] --------------------     Finish ALO system environments setup
+[2024-12-08 05:57:36,592|ALO|INFO|utils.py(79)|_log_process()] --------------------     Current pipeline: inference_pipeline
+[2024-12-08 05:57:36,606|ALO|INFO|utils.py(77)|_log_process()] 
+----------------------------------------------------------------------------------------------------------------------
+                                        << SETUP >> inference_pipeline start
+----------------------------------------------------------------------------------------------------------------------
+
+[2024-12-08 05:57:36,630|ALO|MSG|pipeline.py(792)|_empty_artifacts()] Successfully emptied << /home/jovyan/과제/실직속/fcst_simul/fcst_0914/inference_artifacts/extra_output >> 
+[2024-12-08 05:57:36,645|ALO|MSG|pipeline.py(792)|_empty_artifacts()] Successfully emptied << /home/jovyan/과제/실직속/fcst_simul/fcst_0914/inference_artifacts/score >> 
+[2024-12-08 05:57:36,661|ALO|MSG|pipeline.py(792)|_empty_artifacts()] Successfully emptied << /home/jovyan/과제/실직속/fcst_simul/fcst_0914/inference_artifacts/output >> 
+[2024-12-08 05:57:36,680|ALO|MSG|pipeline.py(865)|_install_asset()] Start setting-up << inference >> asset @ << assets >> directory.
+[2024-12-08 05:57:36,694|ALO|MSG|pipeline.py(894)|_install_asset()] << inference >> asset had already been created at 2024-12-06 07:53:41.545690
+[2024-12-08 05:57:36,708|ALO|MSG|pipeline.py(865)|_install_asset()] Start setting-up << output >> asset @ << assets >> directory.
+[2024-12-08 05:57:36,721|ALO|MSG|pipeline.py(894)|_install_asset()] << output >> asset had already been created at 2024-09-26 13:45:26.766779
+[2024-12-08 05:57:36,736|ALO|MSG|install.py(57)|_install_packages()] ======================================== Start dependency installation : << force-reinstall >> 
+[2024-12-08 05:57:36,749|ALO|MSG|install.py(57)|_install_packages()] ======================================== Start dependency installation : << link_install >> 
+[2024-12-08 05:57:36,763|ALO|MSG|install.py(102)|_install_packages()] ======================================== Finish dependency installation 
+
+[2024-12-08 05:57:36,778|ALO|INFO|utils.py(77)|_log_process()] 
+----------------------------------------------------------------------------------------------------------------------
+                                        << SETUP >> inference_pipeline finish
+----------------------------------------------------------------------------------------------------------------------
+
+[2024-12-08 05:57:36,792|ALO|INFO|utils.py(77)|_log_process()] 
+----------------------------------------------------------------------------------------------------------------------
+                                        << LOAD >> inference_pipeline start
+----------------------------------------------------------------------------------------------------------------------
+
+[2024-12-08 05:57:36,805|ALO|WARNING|external.py(275)|external_load_data()] Not allowed to access aws infra. You did not write any << aws_key_profile >> in the experimental_plan.yaml file.
+[2024-12-08 05:57:36,821|ALO|MSG|external.py(324)|external_load_data()] Successfuly removed << /home/jovyan/과제/실직속/fcst_simul/fcst_0914/input/inference/ >> before loading external data.
+[2024-12-08 05:57:36,834|ALO|MSG|external.py(689)|_get_ext_path_type()] << ./solution/sample_data/electronic_test/ >> may be relative path. The reference folder of relative path is << /home/jovyan/과제/실직속/fcst_simul/fcst_0914/ >>. 
+ If this is not appropriate relative path, Loading external data process would raise error.
+[2024-12-08 05:57:36,857|ALO|MSG|external.py(669)|_load_data()] Successfully done loading external data: 
+ ./solution/sample_data/electronic_test/ --> /home/jovyan/과제/실직속/fcst_simul/fcst_0914/input/inference/
+[2024-12-08 05:57:36,870|ALO|MSG|external.py(332)|external_load_data()] Successfuly finish loading << ./solution/sample_data/electronic_test/ >> into << /home/jovyan/과제/실직속/fcst_simul/fcst_0914/input/ >>
+[2024-12-08 05:57:36,884|ALO|INFO|utils.py(77)|_log_process()] 
+----------------------------------------------------------------------------------------------------------------------
+                                        << LOAD >> inference_pipeline finish
+----------------------------------------------------------------------------------------------------------------------
+
+[2024-12-08 05:57:36,897|ALO|INFO|utils.py(77)|_log_process()] 
+----------------------------------------------------------------------------------------------------------------------
+                                        << RUN >> inference_pipeline start
+----------------------------------------------------------------------------------------------------------------------
+
+[2024-12-08 05:57:36,910|ALO|INFO|utils.py(79)|_log_process()] --------------------     current step: inference
+[2024-12-08 05:57:38,117|ALO|INFO|utils.py(79)|_log_process()] --------------------     current step: output
+[2024-12-08 05:57:38,749|ALO|INFO|utils.py(77)|_log_process()] 
+----------------------------------------------------------------------------------------------------------------------
+                                        << RUN >> inference_pipeline finish
+----------------------------------------------------------------------------------------------------------------------
+
+[2024-12-08 05:57:38,762|ALO|INFO|utils.py(77)|_log_process()] 
+----------------------------------------------------------------------------------------------------------------------
+                                        << SAVE >> inference_pipeline start
+----------------------------------------------------------------------------------------------------------------------
+
+[2024-12-08 05:57:38,776|ALO|MSG|pipeline.py(499)|_check_output()] [Success] << inference_summary.yaml >> exists in the inference score path: << /home/jovyan/과제/실직속/fcst_simul/fcst_0914/inference_artifacts/score/ >>
+[2024-12-08 05:57:38,790|ALO|MSG|external.py(439)|external_save_artifacts()] None of external path is written in your experimental_plan.yaml. Skip saving artifacts into external path. 
+
+[2024-12-08 05:57:38,804|ALO|MSG|pipeline.py(249)|save()] Process finish-time: 2024-12-08 05:57:38
+[2024-12-08 05:57:39,892|ALO|MSG|artifacts.py(158)|_delete_from_folder()] [backup_history] Backup size limit exceeded. Delete history folder: /home/jovyan/과제/실직속/fcst_simul/fcst_0914/history/train/20241206T001633Z-82561035-fcst_simulation
+[2024-12-08 05:57:40,477|ALO|MSG|artifacts.py(158)|_delete_from_folder()] [backup_history] Backup size limit exceeded. Delete history folder: /home/jovyan/과제/실직속/fcst_simul/fcst_0914/history/inference/20241205T235306Z-34326999-fcst_simulation
+[2024-12-08 05:57:41,039|ALO|INFO|utils.py(77)|_log_process()] 
+----------------------------------------------------------------------------------------------------------------------
+                                        << SAVE >> inference_pipeline finish
+----------------------------------------------------------------------------------------------------------------------
+
+[2024-12-08 05:57:41,054|ALO|MSG|alo.py(248)|_execute_pipeline()] inference_pipeline setup time: 0.186s
+[2024-12-08 05:57:41,067|ALO|MSG|alo.py(248)|_execute_pipeline()] inference_pipeline load time: 0.105s
+[2024-12-08 05:57:41,081|ALO|MSG|alo.py(248)|_execute_pipeline()] inference_pipeline run time: 1.865s
+[2024-12-08 05:57:41,094|ALO|MSG|alo.py(248)|_execute_pipeline()] inference_pipeline save time: 2.29s
+[2024-12-08 05:57:41,107|ALO|MSG|alo.py(248)|_execute_pipeline()] inference_pipeline total time: 4.447s
+[2024-12-08 05:57:41,121|ALO|INFO|utils.py(121)|_log_show()] 
+===========================================================    < SUMMARY SHOW - ALO >    ===========================================================
+- time increment: 0s --- [SHOW|2024-12-08 05:57:36,955|ALO|INFO|asset.py(738)|_run()] inference asset start
+- time increment: 1.135s --- [SHOW|2024-12-08 05:57:38,090|ALO|INFO|asset.py(755)|_run()] inference asset finish
+- time increment: 0.068s --- [SHOW|2024-12-08 05:57:38,158|ALO|INFO|asset.py(738)|_run()] output asset start
+- time increment: 0.487s --- [SHOW|2024-12-08 05:57:38,645|ALO|INFO|asset.py(755)|_run()] output asset finish
+[2024-12-08 05:57:41,135|ALO|INFO|utils.py(123)|_log_show()] 
+===========================================================    < SUMMARY SHOW - USER >    ===========================================================
+

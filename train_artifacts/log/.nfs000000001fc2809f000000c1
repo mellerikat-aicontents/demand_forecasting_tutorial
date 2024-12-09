@@ -1,0 +1,116 @@
+[2024-12-06 13:45:38,957|ALO|INFO|utils.py(79)|_log_process()] --------------------     Start setting-up ALO source code into the memory..
+[2024-12-06 13:45:38,959|ALO|INFO|utils.py(79)|_log_process()] --------------------     Finish setting-up ALO source code
+[2024-12-06 13:45:38,961|ALO|INFO|utils.py(79)|_log_process()] --------------------     Start ALO library installation
+[2024-12-06 13:45:38,965|ALO|MSG|alo.py(505)|_set_alolib()] alolib already exists in local path.
+
+[2024-12-06 13:45:42,112|ALO|MSG|alo.py(518)|_set_alolib()] Success installing alolib requirements.txt
+[2024-12-06 13:45:42,114|ALO|MSG|alo.py(519)|_set_alolib()] Requirement already satisfied: pyyaml==6.0.1 in /home/jovyan/.local/share/virtualenvs/env-XiqWVXKH/lib/python3.10/site-packages (from -r /home/jovyan/과제/실직속/fcst_simul/fcst_0914/alolib/requirements.txt (line 1)) (6.0.1)
+Requirement already satisfied: pytz==2021.3 in /home/jovyan/.local/share/virtualenvs/env-XiqWVXKH/lib/python3.10/site-packages (from -r /home/jovyan/과제/실직속/fcst_simul/fcst_0914/alolib/requirements.txt (line 2)) (2021.3)
+Requirement already satisfied: psutil==5.9.5 in /home/jovyan/.local/share/virtualenvs/env-XiqWVXKH/lib/python3.10/site-packages (from -r /home/jovyan/과제/실직속/fcst_simul/fcst_0914/alolib/requirements.txt (line 3)) (5.9.5)
+Collecting requests==2.31.0 (from -r /home/jovyan/과제/실직속/fcst_simul/fcst_0914/alolib/requirements.txt (line 4))
+  Using cached requests-2.31.0-py3-none-any.whl.metadata (4.6 kB)
+Requirement already satisfied: colorama==0.4.6 in /home/jovyan/.local/share/virtualenvs/env-XiqWVXKH/lib/python3.10/site-packages (from -r /home/jovyan/과제/실직속/fcst_simul/fcst_0914/alolib/requirements.txt (line 5)) (0.4.6)
+Requirement already satisfied: memory-profiler==0.61.0 in /home/jovyan/.local/share/virtualenvs/env-XiqWVXKH/lib/python3.10/site-packages (from -r /home/jovyan/과제/실직속/fcst_simul/fcst_0914/alolib/requirements.txt (line 6)) (0.61.0)
+Requirement already satisfied: charset-normalizer<4,>=2 in /home/jovyan/.local/share/virtualenvs/env-XiqWVXKH/lib/python3.10/site-packages (from requests==2.31.0->-r /home/jovyan/과제/실직속/fcst_simul/fcst_0914/alolib/requirements.txt (line 4)) (3.3.2)
+Requirement already satisfied: idna<4,>=2.5 in /home/jovyan/.local/share/virtualenvs/env-XiqWVXKH/lib/python3.10/site-packages (from requests==2.31.0->-r /home/jovyan/과제/실직속/fcst_simul/fcst_0914/alolib/requirements.txt (line 4)) (2.10)
+Requirement already satisfied: urllib3<3,>=1.21.1 in /home/jovyan/.local/share/virtualenvs/env-XiqWVXKH/lib/python3.10/site-packages (from requests==2.31.0->-r /home/jovyan/과제/실직속/fcst_simul/fcst_0914/alolib/requirements.txt (line 4)) (1.26.20)
+Requirement already satisfied: certifi>=2017.4.17 in /home/jovyan/.local/share/virtualenvs/env-XiqWVXKH/lib/python3.10/site-packages (from requests==2.31.0->-r /home/jovyan/과제/실직속/fcst_simul/fcst_0914/alolib/requirements.txt (line 4)) (2024.2.2)
+Using cached requests-2.31.0-py3-none-any.whl (62 kB)
+Installing collected packages: requests
+  Attempting uninstall: requests
+    Found existing installation: requests 2.25.1
+    Uninstalling requests-2.25.1:
+      Successfully uninstalled requests-2.25.1
+Successfully installed requests-2.31.0
+
+[2024-12-06 13:45:42,117|ALO|INFO|utils.py(79)|_log_process()] --------------------     Finish ALO library installation
+[2024-12-06 13:45:42,119|ALO|INFO|utils.py(79)|_log_process()] --------------------     Check ALO version
+[2024-12-06 13:45:42,122|ALO|MSG|alo.py(542)|_get_alo_version()] ALO version = v2.5.2
+[2024-12-06 13:45:42,124|ALO|INFO|utils.py(79)|_log_process()] --------------------     Finish ALO version check
+[2024-12-06 13:45:42,126|ALO|INFO|utils.py(79)|_log_process()] --------------------     Start loading solution-metadata
+[2024-12-06 13:45:42,129|ALO|MSG|alo.py(647)|load_solution_metadata()] Solution metadata file name not entered. Skip updating solution metadata into experimental_plan.
+[2024-12-06 13:45:42,131|ALO|INFO|utils.py(79)|_log_process()] --------------------     Load & update experimental_plan
+[2024-12-06 13:45:42,133|ALO|MSG|yaml.py(158)|read_yaml()] Start to read experimental plan yaml (& update by solution meta)
+[2024-12-06 13:45:42,136|ALO|MSG|yaml.py(163)|read_yaml()] Successfully loaded << experimental_plan.yaml >> (file: /home/jovyan/과제/실직속/fcst_simul/fcst_0914/solution/experimental_plan.yaml)
+[2024-12-06 13:45:42,161|ALO|WARNING|yaml.py(319)|_set_default_control()] experimental_plan.yaml control - check_resource not found. Set it default value : False
+[2024-12-06 13:45:42,163|ALO|WARNING|yaml.py(319)|_set_default_control()] experimental_plan.yaml control - save_inference_format not found. Set it default value : tar.gz
+[2024-12-06 13:45:42,165|ALO|INFO|utils.py(79)|_log_process()] --------------------     Finish loading & updating experimental_plan
+[2024-12-06 13:45:42,167|ALO|INFO|utils.py(79)|_log_process()] --------------------     Setup ALO system environments
+[2024-12-06 13:45:42,170|ALO|MSG|alo.py(628)|_set_system_envs()] system_envs: {'redis_list_instance': None, 'redis_pubsub_instance': None, 'alo_version': 'v2.5.2', 'experimental_start_time': '20241206T134542Z', 'solution_metadata': {}, 'experimental_plan_path': '/home/jovyan/과제/실직속/fcst_simul/fcst_0914/solution/experimental_plan.yaml', 'experimental_name': 'fcst_simulation', 'experimental_version': '1.0.0', 'solution_metadata_version': None, 'q_inference_summary': None, 'q_inference_artifacts': None, 'redis_host': None, 'redis_port': None, 'redis_db_number': None, 'inference_result_datatype': None, 'train_datatype': None, 'pipeline_mode': 'all', 'runs_status': 'init', 'boot_on': False, 'loop': False, 'start_time': '241206_134542', 'pipeline_list': ['train_pipeline', 'inference_pipeline']}
+[2024-12-06 13:45:42,172|ALO|INFO|utils.py(79)|_log_process()] --------------------     Finish ALO system environments setup
+[2024-12-06 13:45:42,178|ALO|INFO|utils.py(79)|_log_process()] --------------------     Current pipeline: train_pipeline
+[2024-12-06 13:45:42,180|ALO|INFO|utils.py(77)|_log_process()] 
+----------------------------------------------------------------------------------------------------------------------
+                                        << SETUP >> train_pipeline start
+----------------------------------------------------------------------------------------------------------------------
+
+[2024-12-06 13:45:42,186|ALO|MSG|pipeline.py(792)|_empty_artifacts()] Successfully emptied << /home/jovyan/과제/실직속/fcst_simul/fcst_0914/train_artifacts/models >> 
+[2024-12-06 13:45:42,191|ALO|MSG|pipeline.py(792)|_empty_artifacts()] Successfully emptied << /home/jovyan/과제/실직속/fcst_simul/fcst_0914/train_artifacts/extra_output >> 
+[2024-12-06 13:45:42,195|ALO|MSG|pipeline.py(792)|_empty_artifacts()] Successfully emptied << /home/jovyan/과제/실직속/fcst_simul/fcst_0914/train_artifacts/report >> 
+[2024-12-06 13:45:42,199|ALO|MSG|pipeline.py(792)|_empty_artifacts()] Successfully emptied << /home/jovyan/과제/실직속/fcst_simul/fcst_0914/train_artifacts/score >> 
+[2024-12-06 13:45:42,202|ALO|MSG|pipeline.py(792)|_empty_artifacts()] Successfully emptied << /home/jovyan/과제/실직속/fcst_simul/fcst_0914/train_artifacts/output >> 
+[2024-12-06 13:45:42,205|ALO|MSG|pipeline.py(865)|_install_asset()] Start setting-up << train >> asset @ << assets >> directory.
+[2024-12-06 13:45:42,207|ALO|MSG|pipeline.py(894)|_install_asset()] << train >> asset had already been created at 2024-12-06 13:45:35.144037
+[2024-12-06 13:45:42,211|ALO|MSG|install.py(57)|_install_packages()] ======================================== Start dependency installation : << train >> 
+[2024-12-06 13:45:42,213|ALO|MSG|install.py(59)|_install_packages()] Start checking existence & installing package - pandas==1.5.3 | Progress: ( 1 / 15 total packages ) 
+[2024-12-06 13:45:42,217|ALO|MSG|install.py(82)|_install_packages()] [OK] << pandas==1.5.3 >> already exists
+[2024-12-06 13:45:42,219|ALO|MSG|install.py(59)|_install_packages()] Start checking existence & installing package - numpy==1.26.4 | Progress: ( 2 / 15 total packages ) 
+[2024-12-06 13:45:42,222|ALO|MSG|install.py(82)|_install_packages()] [OK] << numpy==1.26.4 >> already exists
+[2024-12-06 13:45:42,224|ALO|MSG|install.py(59)|_install_packages()] Start checking existence & installing package - pytorch-forecasting==0.10.1 | Progress: ( 3 / 15 total packages ) 
+[2024-12-06 13:45:42,226|ALO|MSG|install.py(82)|_install_packages()] [OK] << pytorch-forecasting==0.10.1 >> already exists
+[2024-12-06 13:45:42,228|ALO|MSG|install.py(59)|_install_packages()] Start checking existence & installing package - pytorch-lightning==1.6.4 | Progress: ( 4 / 15 total packages ) 
+[2024-12-06 13:45:42,230|ALO|MSG|install.py(82)|_install_packages()] [OK] << pytorch-lightning==1.6.4 >> already exists
+[2024-12-06 13:45:42,232|ALO|MSG|install.py(59)|_install_packages()] Start checking existence & installing package - lightgbm==3.2.1 | Progress: ( 5 / 15 total packages ) 
+[2024-12-06 13:45:42,235|ALO|MSG|install.py(82)|_install_packages()] [OK] << lightgbm==3.2.1 >> already exists
+[2024-12-06 13:45:42,237|ALO|MSG|install.py(59)|_install_packages()] Start checking existence & installing package - seaborn==0.11.1 | Progress: ( 6 / 15 total packages ) 
+[2024-12-06 13:45:42,239|ALO|MSG|install.py(82)|_install_packages()] [OK] << seaborn==0.11.1 >> already exists
+[2024-12-06 13:45:42,242|ALO|MSG|install.py(59)|_install_packages()] Start checking existence & installing package - chart-studio==1.1.0 | Progress: ( 7 / 15 total packages ) 
+[2024-12-06 13:45:42,244|ALO|MSG|install.py(82)|_install_packages()] [OK] << chart-studio==1.1.0 >> already exists
+[2024-12-06 13:45:42,246|ALO|MSG|install.py(59)|_install_packages()] Start checking existence & installing package - cufflinks==0.17.3 | Progress: ( 8 / 15 total packages ) 
+[2024-12-06 13:45:42,249|ALO|MSG|install.py(82)|_install_packages()] [OK] << cufflinks==0.17.3 >> already exists
+[2024-12-06 13:45:42,251|ALO|MSG|install.py(59)|_install_packages()] Start checking existence & installing package - kaleido==0.2.1 | Progress: ( 9 / 15 total packages ) 
+[2024-12-06 13:45:42,253|ALO|MSG|install.py(82)|_install_packages()] [OK] << kaleido==0.2.1 >> already exists
+[2024-12-06 13:45:42,256|ALO|MSG|install.py(59)|_install_packages()] Start checking existence & installing package - SQLAlchemy==1.3.15 | Progress: ( 10 / 15 total packages ) 
+[2024-12-06 13:45:42,258|ALO|MSG|install.py(82)|_install_packages()] [OK] << SQLAlchemy==1.3.15 >> already exists
+[2024-12-06 13:45:42,261|ALO|MSG|install.py(59)|_install_packages()] Start checking existence & installing package - mysql-connector==2.2.9 | Progress: ( 11 / 15 total packages ) 
+[2024-12-06 13:45:42,263|ALO|MSG|install.py(82)|_install_packages()] [OK] << mysql-connector==2.2.9 >> already exists
+[2024-12-06 13:45:42,265|ALO|MSG|install.py(59)|_install_packages()] Start checking existence & installing package - pyarrow==9.0.0 | Progress: ( 12 / 15 total packages ) 
+[2024-12-06 13:45:42,268|ALO|MSG|install.py(82)|_install_packages()] [OK] << pyarrow==9.0.0 >> already exists
+[2024-12-06 13:45:42,270|ALO|MSG|install.py(59)|_install_packages()] Start checking existence & installing package - pymsteams==0.2.2 | Progress: ( 13 / 15 total packages ) 
+[2024-12-06 13:45:42,272|ALO|MSG|install.py(82)|_install_packages()] [OK] << pymsteams==0.2.2 >> already exists
+[2024-12-06 13:45:42,275|ALO|MSG|install.py(59)|_install_packages()] Start checking existence & installing package - pymysql==1.1.0 | Progress: ( 14 / 15 total packages ) 
+[2024-12-06 13:45:42,277|ALO|MSG|install.py(82)|_install_packages()] [OK] << pymysql==1.1.0 >> already exists
+[2024-12-06 13:45:42,280|ALO|MSG|install.py(59)|_install_packages()] Start checking existence & installing package - requests==2.25.1 | Progress: ( 15 / 15 total packages ) 
+[2024-12-06 13:45:42,282|ALO|MSG|install.py(82)|_install_packages()] [OK] << requests==2.25.1 >> already exists
+[2024-12-06 13:45:42,285|ALO|MSG|install.py(57)|_install_packages()] ======================================== Start dependency installation : << force-reinstall >> 
+[2024-12-06 13:45:42,287|ALO|MSG|install.py(57)|_install_packages()] ======================================== Start dependency installation : << link_install >> 
+[2024-12-06 13:45:42,289|ALO|MSG|install.py(102)|_install_packages()] ======================================== Finish dependency installation 
+
+[2024-12-06 13:45:42,292|ALO|INFO|utils.py(77)|_log_process()] 
+----------------------------------------------------------------------------------------------------------------------
+                                        << SETUP >> train_pipeline finish
+----------------------------------------------------------------------------------------------------------------------
+
+[2024-12-06 13:45:42,294|ALO|INFO|utils.py(77)|_log_process()] 
+----------------------------------------------------------------------------------------------------------------------
+                                        << LOAD >> train_pipeline start
+----------------------------------------------------------------------------------------------------------------------
+
+[2024-12-06 13:45:42,297|ALO|WARNING|external.py(275)|external_load_data()] Not allowed to access aws infra. You did not write any << aws_key_profile >> in the experimental_plan.yaml file.
+[2024-12-06 13:45:42,308|ALO|MSG|external.py(324)|external_load_data()] Successfuly removed << /home/jovyan/과제/실직속/fcst_simul/fcst_0914/input/train/ >> before loading external data.
+[2024-12-06 13:45:42,310|ALO|MSG|external.py(689)|_get_ext_path_type()] << ./solution/sample_data/electronic_train >> may be relative path. The reference folder of relative path is << /home/jovyan/과제/실직속/fcst_simul/fcst_0914/ >>. 
+ If this is not appropriate relative path, Loading external data process would raise error.
+[2024-12-06 13:45:42,834|ALO|MSG|external.py(669)|_load_data()] Successfully done loading external data: 
+ ./solution/sample_data/electronic_train --> /home/jovyan/과제/실직속/fcst_simul/fcst_0914/input/train/
+[2024-12-06 13:45:42,836|ALO|MSG|external.py(332)|external_load_data()] Successfuly finish loading << ./solution/sample_data/electronic_train >> into << /home/jovyan/과제/실직속/fcst_simul/fcst_0914/input/ >>
+[2024-12-06 13:45:42,838|ALO|INFO|utils.py(77)|_log_process()] 
+----------------------------------------------------------------------------------------------------------------------
+                                        << LOAD >> train_pipeline finish
+----------------------------------------------------------------------------------------------------------------------
+
+[2024-12-06 13:45:42,840|ALO|INFO|utils.py(77)|_log_process()] 
+----------------------------------------------------------------------------------------------------------------------
+                                        << RUN >> train_pipeline start
+----------------------------------------------------------------------------------------------------------------------
+
+[2024-12-06 13:45:42,843|ALO|INFO|utils.py(79)|_log_process()] --------------------     current step: train
