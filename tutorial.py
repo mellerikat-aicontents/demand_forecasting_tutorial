@@ -27,7 +27,7 @@ def credible_interval_plot_plotly(input_inf, data, subtitle="tbd"):
     data = data.sort_values("targetdate")
 
     
-    qty_ = go.Scatter(x=input_inf.loc[:, "timestamp"],y=input_inf.loc[:,"QTY"],
+    qty_ = go.Scatter(x=input_inf.loc[:, "timestamp"],y=input_inf.loc[:,"actual"],
                                       line=go.scatter.Line(color="Blue", width=2, dash="dashdot"), name="Actual")
 
     mean_ = go.Scatter(x=data.loc[:, "targetdate"],y=data.loc[:,"fcst0.5"],
